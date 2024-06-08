@@ -1,0 +1,32 @@
+### GET all tasks
+GET {{host}}/api/v1/tasks
+###
+
+### Get all open tasks
+GET {{host}}/api/v1/tasks?status=closed
+
+### Get all closed tasks
+GET {{host}}/api/v1/tasks?status=open
+
+### Get task by ID
+GET {{host}}/api/v1/tasks/2
+
+### Create task
+POST {{host}}/api/v1/tasks
+Content-Type: application/json
+
+{
+  "description": "new task",
+  "done": false
+}
+
+### Update Task
+PATCH {{host}}/api/v1/tasks/3
+Content-Type: application/json
+
+{
+  "done": true
+}
+
+### Delete Task
+DELETE {{host}}/api/v1/tasks/3
